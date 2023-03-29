@@ -1,0 +1,26 @@
+$social-icon-color: $body-color
+@include color-mode(dark) 
+    $social-icon-color: $body-color-dark
+
+$social-icon-orcid: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25' fill='#{$social-icon-color}'><path d='M12.5 0C5.596 0 0 5.596 0 12.5S5.596 25 12.5 25 25 19.404 25 12.5 19.404 0 12.5 0zM6.97 3.836c.604 0 1.087.493 1.087 1.08a1.085 1.085 0 0 1-2.172 0 1.08 1.08 0 0 1 1.086-1.08zm-.83 3.46H7.8V18.74H6.14V7.297zm4.09 0h4.477c4.262 0 6.133 3.025 6.133 5.727 0 2.938-2.313 5.727-6.111 5.727H10.23V7.297zm1.657 1.485v8.485h2.636c3.756 0 4.618-2.832 4.618-4.243 0-2.297-1.476-4.242-4.703-4.242h-2.551z' fill-rule='nonzero'/></svg>")
+
+.social-icon
+    width: 25px
+    height: 25px
+
+    &::after
+        display: block
+        flex-shrink: 0
+        width: 25px
+        height: 25px
+        content: ""
+        background-repeat: no-repeat
+        background-size: 25px
+
+    &.social-icon-orcid::after
+        background-image: #{escape-svg($social-icon-orcid)}
+
+@include color-mode(dark)
+    .social-icon
+        &.social-icon-orcid::after
+            background-image: #{escape-svg($social-icon-orcid)}
