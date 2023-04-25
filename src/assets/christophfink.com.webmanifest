@@ -1,0 +1,16 @@
+{
+    "name": "Christoph Fink",
+    "start_url": ".",
+    "icons": [
+        {
+            "src": "assets/favicon_192x192px.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "assets/favicon_512x512px.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ]
+}
