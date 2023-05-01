@@ -1,8 +1,8 @@
 [submodule "vendor/bootstrap"]
 	path = vendor/bootstrap
 	url = git@github.com:twbs/bootstrap.git
-	branch = main
+    tag = v5.3.0-alpha3
 [submodule "vendor/bootstrap-icons"]
 	path = vendor/bootstrap-icons
 	url = git@github.com:twbs/icons.git
-	branch = main
+    tag = v1.10.5
