@@ -15,13 +15,14 @@ $font-family-base: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helve
 @import "./bootstrap-extra"
 
 //@import "./bootstrap-icons"
-@import "./social-icons"
+@import "./icons"
 
 header.navbar
     background-color: var(--bs-body-bg)
 
 section#introduction
     margin-top: calc(12vW + 1rem)
+    margin-bottom: calc(3vW + 1rem)
 
     h1
         font-size: calc(1.375rem + 1vW)
@@ -36,3 +37,7 @@ section#introduction
 
     p.lead
         font-weight: 500
+
+section
+    h2
+        padding-top: 4rem !important

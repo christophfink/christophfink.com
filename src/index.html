@@ -42,12 +42,18 @@
         <script src="assets/js/bootstrap-darkmode.js"></script>
         <script src="assets/js/christophfink.com.js"></script>
     </head>
-    <body data-bs-spy="scroll" data-bs-target="#navigation">
-        <div class="container-xxl my-3 g-2">
+    <body
+        data-bs-spy="scroll"
+        data-bs-target="#navigation"
+        data-bs-root-margin="-10% 0px -40%"
+        data-bs-smooth-scroll="true"
+        tabindex="0"
+    >
+        <div class="container-xxl my-3 g-2" id="home">
             <main>
             <section
-                class="d-flex flex-wrap flex-md-nowrap justify-content-center
-                align-items-center p-4"
+                class="container-md d-flex flex-wrap flex-md-nowrap
+                justify-content-center align-items-center p-4"
                 id="introduction"
             >
                     <div class="">
@@ -74,55 +80,233 @@
                             <a 
                                 rel="me social"
                                 href="https://orcid.org/0000-0003-1251-9726"
-                                class="social-icon social-icon-orcid"
-                            ></a>
+                                class="icon icon-hover icon-orcid"
+                            >
+                                <span class="visually-hidden">ORCID</span>
+                            </a>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <header class="navbar navbar-expand-sm sticky-top px-4 py-2">
+            <header class="navbar navbar-expand-sm sticky-top px-4 py-2" role="navigation">
                 <ul class="navbar-nav nav-underline me-auto mb-2 mb-lg-0 container-fluid justify-content-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#research">Research</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#short-cv">Short CV</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#publications">Publications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://christophfink.com/blog/">
+                            Blog <i class="icon icon-external-link"></i>
+                        </a>
                     </li>
                 </ul>
             </header>
 
-            <p>lorem ipsum sit dolor</p>
-            <p>lorem ipsum sit dolor</p>
-            <p>lorem ipsum sit dolor</p>
-            <p>lorem ipsum sit dolor</p>
-            <p>lorem ipsum sit dolor</p>
-            <p>lorem ipsum sit dolor</p>
-            <p>lorem ipsum sit dolor</p>
-            <p>lorem ipsum sit dolor</p>
-            <p>lorem ipsum sit dolor</p>
-            <p>lorem ipsum sit dolor</p>
-            <p>lorem ipsum sit dolor</p>
-            <p>lorem ipsum sit dolor</p>
-            <p>lorem ipsum sit dolor</p>
-            <p>lorem ipsum sit dolor</p>
-            <p>lorem ipsum sit dolor</p>
-            <p>lorem ipsum sit dolor</p>
-            <p>lorem ipsum sit dolor</p>
-            <p>lorem ipsum sit dolor</p>
-            <p>lorem ipsum sit dolor</p>
-            <p>lorem ipsum sit dolor</p>
-            <p>lorem ipsum sit dolor</p>
-            <p>lorem ipsum sit dolor</p>
-            <p>lorem ipsum sit dolor</p>
-            <p>lorem ipsum sit dolor</p>
-            <p>lorem ipsum sit dolor</p>
-            <p>lorem ipsum sit dolor</p>
-            <p>lorem ipsum sit dolor</p>
-            <p>lorem ipsum sit dolor</p>
-            <p>lorem ipsum sit dolor</p>
-            <p>lorem ipsum sit dolor</p>
-            <p>lorem ipsum sit dolor</p>
-            <p>lorem ipsum sit dolor</p>
+            <section class="container-md p-4">
+                <h2 id="research">Research</h2>
+                <p>lorem ipsum sit dolor</p>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lacus enim, mollis sit amet nibh
+                    eu, convallis finibus nunc. Cras mattis ante justo, volutpat mattis nisi ultrices sit amet. Donec
+                    pretium dapibus hendrerit. Donec in sodales ipsum. Morbi cursus justo in nulla dapibus fermentum in
+                    id nulla. Aenean tempor pellentesque velit ac feugiat. Fusce faucibus interdum felis eget faucibus.
+                    Nullam egestas id ex id vulputate.
+                </p>
+                <p>
+                    Mauris cursus placerat lacus, in efficitur justo. Nullam a arcu ac leo condimentum malesuada.
+                    Vivamus sit amet tempus urna, et iaculis elit. Nulla non ipsum sit amet dui ornare dignissim. Fusce
+                    tempor justo in nunc scelerisque, at tincidunt purus porttitor. Donec in dui augue. Morbi eget eros
+                    eu libero dapibus elementum a eget ex. Pellentesque ultricies vulputate massa, vitae varius tortor
+                    eleifend sit amet.
+                </p>
+                <p>
+                    Nullam vel tempus massa. Aliquam erat volutpat. Curabitur a blandit enim. Donec iaculis ex magna,
+                    sed varius lectus ornare viverra. Etiam elit dolor, dapibus non viverra at, iaculis a lacus. In
+                    tempus suscipit laoreet. Praesent auctor, elit quis vehicula commodo, erat est vulputate quam, sed
+                    efficitur justo enim eget ante. Pellentesque maximus, purus id tempor interdum, turpis nibh rutrum
+                    massa, id lacinia augue arcu eu metus. Aliquam erat volutpat. Curabitur commodo orci non justo
+                    commodo, a interdum arcu mollis.
+                </p>
+                <p>
+                    Sed maximus dui sed blandit pellentesque. Aliquam convallis, est in fermentum aliquet, arcu dui
+                    placerat enim, non pellentesque turpis tortor quis lacus. In at diam sed felis interdum malesuada.
+                    Cras et varius lectus. Morbi quis purus nibh. Suspendisse potenti. Donec posuere dolor ante, ut
+                    interdum diam tincidunt sed. Quisque tristique ultrices urna, at sagittis tortor luctus et. Mauris
+                    eget velit id magna posuere gravida egestas non nisl. Aenean efficitur arcu dapibus, volutpat tortor
+                    vitae, accumsan elit. Aliquam turpis ante, aliquam ac bibendum ut, pulvinar non felis. In hac
+                    habitasse platea dictumst. Aenean egestas metus at placerat tempus. Pellentesque vel neque accumsan,
+                    commodo elit vel, pretium nulla. Maecenas nulla magna, accumsan eget scelerisque a, pulvinar ut
+                    odio. Nulla varius sagittis tempor.
+                </p>
+                <p>
+                    Nulla eget accumsan tellus. Mauris molestie nisl ut libero maximus interdum. Nam viverra tellus eu
+                    dui dapibus, porttitor malesuada nisl convallis. Proin quis tincidunt velit, nec finibus augue.
+                    Donec ultrices, risus vitae aliquet suscipit, metus diam ultricies nisi, a commodo leo nulla vel
+                    ipsum. Proin facilisis egestas neque, sed vulputate tellus vehicula a. Sed cursus odio dui, et
+                    tincidunt lacus feugiat vitae. Integer quis accumsan nunc. Vivamus in velit et arcu sagittis
+                    imperdiet. Aenean ex odio, accumsan et iaculis in, tempus nec odio. Nulla consectetur ligula vel
+                    bibendum posuere.
+                </p>
+            </section>
+
+            <section class="container-md p-4">
+                <h2 id="projects">Projects</h2>
+                <p>lorem ipsum sit dolor</p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lacus enim, mollis sit amet nibh
+                    eu, convallis finibus nunc. Cras mattis ante justo, volutpat mattis nisi ultrices sit amet. Donec
+                    pretium dapibus hendrerit. Donec in sodales ipsum. Morbi cursus justo in nulla dapibus fermentum in
+                    id nulla. Aenean tempor pellentesque velit ac feugiat. Fusce faucibus interdum felis eget faucibus.
+                    Nullam egestas id ex id vulputate.
+                </p>
+                <p>
+                    Mauris cursus placerat lacus, in efficitur justo. Nullam a arcu ac leo condimentum malesuada.
+                    Vivamus sit amet tempus urna, et iaculis elit. Nulla non ipsum sit amet dui ornare dignissim. Fusce
+                    tempor justo in nunc scelerisque, at tincidunt purus porttitor. Donec in dui augue. Morbi eget eros
+                    eu libero dapibus elementum a eget ex. Pellentesque ultricies vulputate massa, vitae varius tortor
+                    eleifend sit amet.
+                </p>
+                <p>
+                    Nullam vel tempus massa. Aliquam erat volutpat. Curabitur a blandit enim. Donec iaculis ex magna,
+                    sed varius lectus ornare viverra. Etiam elit dolor, dapibus non viverra at, iaculis a lacus. In
+                    tempus suscipit laoreet. Praesent auctor, elit quis vehicula commodo, erat est vulputate quam, sed
+                    efficitur justo enim eget ante. Pellentesque maximus, purus id tempor interdum, turpis nibh rutrum
+                    massa, id lacinia augue arcu eu metus. Aliquam erat volutpat. Curabitur commodo orci non justo
+                    commodo, a interdum arcu mollis.
+                </p>
+                <p>
+                    Sed maximus dui sed blandit pellentesque. Aliquam convallis, est in fermentum aliquet, arcu dui
+                    placerat enim, non pellentesque turpis tortor quis lacus. In at diam sed felis interdum malesuada.
+                    Cras et varius lectus. Morbi quis purus nibh. Suspendisse potenti. Donec posuere dolor ante, ut
+                    interdum diam tincidunt sed. Quisque tristique ultrices urna, at sagittis tortor luctus et. Mauris
+                    eget velit id magna posuere gravida egestas non nisl. Aenean efficitur arcu dapibus, volutpat tortor
+                    vitae, accumsan elit. Aliquam turpis ante, aliquam ac bibendum ut, pulvinar non felis. In hac
+                    habitasse platea dictumst. Aenean egestas metus at placerat tempus. Pellentesque vel neque accumsan,
+                    commodo elit vel, pretium nulla. Maecenas nulla magna, accumsan eget scelerisque a, pulvinar ut
+                    odio. Nulla varius sagittis tempor.
+                </p>
+                <p>
+                    Nulla eget accumsan tellus. Mauris molestie nisl ut libero maximus interdum. Nam viverra tellus eu
+                    dui dapibus, porttitor malesuada nisl convallis. Proin quis tincidunt velit, nec finibus augue.
+                    Donec ultrices, risus vitae aliquet suscipit, metus diam ultricies nisi, a commodo leo nulla vel
+                    ipsum. Proin facilisis egestas neque, sed vulputate tellus vehicula a. Sed cursus odio dui, et
+                    tincidunt lacus feugiat vitae. Integer quis accumsan nunc. Vivamus in velit et arcu sagittis
+                    imperdiet. Aenean ex odio, accumsan et iaculis in, tempus nec odio. Nulla consectetur ligula vel
+                    bibendum posuere.
+                </p>
+            </section>
+
+            <section class="container-md p-4">
+                <h2 id="short-cv">Short CV</h2>
+                <p>lorem ipsum sit dolor</p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lacus enim, mollis sit amet nibh
+                    eu, convallis finibus nunc. Cras mattis ante justo, volutpat mattis nisi ultrices sit amet. Donec
+                    pretium dapibus hendrerit. Donec in sodales ipsum. Morbi cursus justo in nulla dapibus fermentum in
+                    id nulla. Aenean tempor pellentesque velit ac feugiat. Fusce faucibus interdum felis eget faucibus.
+                    Nullam egestas id ex id vulputate.
+                </p>
+                <p>
+                    Mauris cursus placerat lacus, in efficitur justo. Nullam a arcu ac leo condimentum malesuada.
+                    Vivamus sit amet tempus urna, et iaculis elit. Nulla non ipsum sit amet dui ornare dignissim. Fusce
+                    tempor justo in nunc scelerisque, at tincidunt purus porttitor. Donec in dui augue. Morbi eget eros
+                    eu libero dapibus elementum a eget ex. Pellentesque ultricies vulputate massa, vitae varius tortor
+                    eleifend sit amet.
+                </p>
+                <p>
+                    Nullam vel tempus massa. Aliquam erat volutpat. Curabitur a blandit enim. Donec iaculis ex magna,
+                    sed varius lectus ornare viverra. Etiam elit dolor, dapibus non viverra at, iaculis a lacus. In
+                    tempus suscipit laoreet. Praesent auctor, elit quis vehicula commodo, erat est vulputate quam, sed
+                    efficitur justo enim eget ante. Pellentesque maximus, purus id tempor interdum, turpis nibh rutrum
+                    massa, id lacinia augue arcu eu metus. Aliquam erat volutpat. Curabitur commodo orci non justo
+                    commodo, a interdum arcu mollis.
+                </p>
+                <p>
+                    Sed maximus dui sed blandit pellentesque. Aliquam convallis, est in fermentum aliquet, arcu dui
+                    placerat enim, non pellentesque turpis tortor quis lacus. In at diam sed felis interdum malesuada.
+                    Cras et varius lectus. Morbi quis purus nibh. Suspendisse potenti. Donec posuere dolor ante, ut
+                    interdum diam tincidunt sed. Quisque tristique ultrices urna, at sagittis tortor luctus et. Mauris
+                    eget velit id magna posuere gravida egestas non nisl. Aenean efficitur arcu dapibus, volutpat tortor
+                    vitae, accumsan elit. Aliquam turpis ante, aliquam ac bibendum ut, pulvinar non felis. In hac
+                    habitasse platea dictumst. Aenean egestas metus at placerat tempus. Pellentesque vel neque accumsan,
+                    commodo elit vel, pretium nulla. Maecenas nulla magna, accumsan eget scelerisque a, pulvinar ut
+                    odio. Nulla varius sagittis tempor.
+                </p>
+                <p>
+                    Nulla eget accumsan tellus. Mauris molestie nisl ut libero maximus interdum. Nam viverra tellus eu
+                    dui dapibus, porttitor malesuada nisl convallis. Proin quis tincidunt velit, nec finibus augue.
+                    Donec ultrices, risus vitae aliquet suscipit, metus diam ultricies nisi, a commodo leo nulla vel
+                    ipsum. Proin facilisis egestas neque, sed vulputate tellus vehicula a. Sed cursus odio dui, et
+                    tincidunt lacus feugiat vitae. Integer quis accumsan nunc. Vivamus in velit et arcu sagittis
+                    imperdiet. Aenean ex odio, accumsan et iaculis in, tempus nec odio. Nulla consectetur ligula vel
+                    bibendum posuere.
+                </p>
+            </section>
+
+            <section class="container-md p-4">
+                <h2 id="publications">Publications</h2>
+                <p>lorem ipsum sit dolor</p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lacus enim, mollis sit amet nibh
+                    eu, convallis finibus nunc. Cras mattis ante justo, volutpat mattis nisi ultrices sit amet. Donec
+                    pretium dapibus hendrerit. Donec in sodales ipsum. Morbi cursus justo in nulla dapibus fermentum in
+                    id nulla. Aenean tempor pellentesque velit ac feugiat. Fusce faucibus interdum felis eget faucibus.
+                    Nullam egestas id ex id vulputate.
+                </p>
+                <p>
+                    Mauris cursus placerat lacus, in efficitur justo. Nullam a arcu ac leo condimentum malesuada.
+                    Vivamus sit amet tempus urna, et iaculis elit. Nulla non ipsum sit amet dui ornare dignissim. Fusce
+                    tempor justo in nunc scelerisque, at tincidunt purus porttitor. Donec in dui augue. Morbi eget eros
+                    eu libero dapibus elementum a eget ex. Pellentesque ultricies vulputate massa, vitae varius tortor
+                    eleifend sit amet.
+                </p>
+                <p>
+                    Nullam vel tempus massa. Aliquam erat volutpat. Curabitur a blandit enim. Donec iaculis ex magna,
+                    sed varius lectus ornare viverra. Etiam elit dolor, dapibus non viverra at, iaculis a lacus. In
+                    tempus suscipit laoreet. Praesent auctor, elit quis vehicula commodo, erat est vulputate quam, sed
+                    efficitur justo enim eget ante. Pellentesque maximus, purus id tempor interdum, turpis nibh rutrum
+                    massa, id lacinia augue arcu eu metus. Aliquam erat volutpat. Curabitur commodo orci non justo
+                    commodo, a interdum arcu mollis.
+                </p>
+                <p>
+                    Sed maximus dui sed blandit pellentesque. Aliquam convallis, est in fermentum aliquet, arcu dui
+                    placerat enim, non pellentesque turpis tortor quis lacus. In at diam sed felis interdum malesuada.
+                    Cras et varius lectus. Morbi quis purus nibh. Suspendisse potenti. Donec posuere dolor ante, ut
+                    interdum diam tincidunt sed. Quisque tristique ultrices urna, at sagittis tortor luctus et. Mauris
+                    eget velit id magna posuere gravida egestas non nisl. Aenean efficitur arcu dapibus, volutpat tortor
+                    vitae, accumsan elit. Aliquam turpis ante, aliquam ac bibendum ut, pulvinar non felis. In hac
+                    habitasse platea dictumst. Aenean egestas metus at placerat tempus. Pellentesque vel neque accumsan,
+                    commodo elit vel, pretium nulla. Maecenas nulla magna, accumsan eget scelerisque a, pulvinar ut
+                    odio. Nulla varius sagittis tempor.
+                </p>
+                <p>
+                    Nulla eget accumsan tellus. Mauris molestie nisl ut libero maximus interdum. Nam viverra tellus eu
+                    dui dapibus, porttitor malesuada nisl convallis. Proin quis tincidunt velit, nec finibus augue.
+                    Donec ultrices, risus vitae aliquet suscipit, metus diam ultricies nisi, a commodo leo nulla vel
+                    ipsum. Proin facilisis egestas neque, sed vulputate tellus vehicula a. Sed cursus odio dui, et
+                    tincidunt lacus feugiat vitae. Integer quis accumsan nunc. Vivamus in velit et arcu sagittis
+                    imperdiet. Aenean ex odio, accumsan et iaculis in, tempus nec odio. Nulla consectetur ligula vel
+                    bibendum posuere.
+                </p>
+            </section>
 
             </main>
+
+
+            <!--<footer with contact etc>-->
         </div>
     </body>
 </html>

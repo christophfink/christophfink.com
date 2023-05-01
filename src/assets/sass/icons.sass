@@ -1,0 +1,70 @@
+$icon-color: $body-color
+
+$icon-orcid: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25' fill='#000'><path d='M12.5 0C5.596 0 0 5.596 0 12.5S5.596 25 12.5 25 25 19.404 25 12.5 19.404 0 12.5 0zM6.97 3.836c.604 0 1.087.493 1.087 1.08a1.085 1.085 0 0 1-2.172 0 1.08 1.08 0 0 1 1.086-1.08zm-.83 3.46H7.8V18.74H6.14V7.297zm4.09 0h4.477c4.262 0 6.133 3.025 6.133 5.727 0 2.938-2.313 5.727-6.111 5.727H10.23V7.297zm1.657 1.485v8.485h2.636c3.756 0 4.618-2.832 4.618-4.243 0-2.297-1.476-4.242-4.703-4.242h-2.551z' fill-rule='nonzero'/></svg>")
+
+$icon-external-link: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-box-arrow-up-right' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z'/><path fill-rule='evenodd' d='M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z'/></svg>")
+
+// for the filters below, compare https://codepen.io/sosuke/pen/Pjoqqp
+// and https://css-tricks.com/change-color-of-svg-on-hover/
+
+.icon
+    width: 20px
+    height: 20px
+    position: relative
+
+    &::after
+        display: block
+        flex-shrink: 0
+        width: 20px
+        height: 20px
+        content: ""
+        background-repeat: no-repeat
+        background-size: 20px
+        filter: invert(16%) sepia(23%) saturate(211%) hue-rotate(168deg) brightness(90%) contrast(102%) // $gray-900
+        //transition: filter 0.25s ease-in-out
+
+    &.icon-hover:hover::after
+        filter: invert(83%) sepia(10%) saturate(231%) hue-rotate(169deg) brightness(86%) contrast(92%) // $gray-500
+
+    // &::before
+    //     pointer-events: none;
+
+    //     display: block
+    //     opacity: 0
+    //     position: absolute
+    //     width: 40px
+    //     height: 20px
+    //     left: -10px
+    //     top: 45px
+
+    //     text-align: center
+    //     color: var(--bs-body-color)
+    //     font-size: 10px
+
+    //     transition: opacity 0.1s ease-in-out
+
+    // &:hover::before
+    //     opacity: 1
+
+
+    &.icon-orcid
+        &::after
+            background-image: #{escape-svg($icon-orcid)}
+        // &::before
+        //     content: "ORCID"
+
+    &.icon-external-link
+        &::after
+            background-image: #{escape-svg($icon-external-link)}
+            display: inline-block
+            width: 12px
+            height: 12px
+            background-size: 12px
+            margin-left: 3px
+
+@include color-mode(dark)
+    .icon
+        &::after
+            filter: invert(100%) sepia(8%) saturate(2161%) hue-rotate(174deg) brightness(91%) contrast(106%) // $gray-200
+        &.icon-hover:hover::after
+            filter: invert(83%) sepia(10%) saturate(231%) hue-rotate(169deg) brightness(86%) contrast(92%) // $gray-500
