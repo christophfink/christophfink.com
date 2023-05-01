@@ -1,5 +1,9 @@
 $icon-color: $body-color
 
+$icon-github: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-github' viewBox='0 0 16 16'><path d='M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z'/></svg>")
+
+$icon-mastodon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-mastodon' viewBox='0 0 16 16'><path d='M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z'/></svg>");
+
 $icon-orcid: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25' fill='#000'><path d='M12.5 0C5.596 0 0 5.596 0 12.5S5.596 25 12.5 25 25 19.404 25 12.5 19.404 0 12.5 0zM6.97 3.836c.604 0 1.087.493 1.087 1.08a1.085 1.085 0 0 1-2.172 0 1.08 1.08 0 0 1 1.086-1.08zm-.83 3.46H7.8V18.74H6.14V7.297zm4.09 0h4.477c4.262 0 6.133 3.025 6.133 5.727 0 2.938-2.313 5.727-6.111 5.727H10.23V7.297zm1.657 1.485v8.485h2.636c3.756 0 4.618-2.832 4.618-4.243 0-2.297-1.476-4.242-4.703-4.242h-2.551z' fill-rule='nonzero'/></svg>")
 
 $icon-external-link: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-box-arrow-up-right' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z'/><path fill-rule='evenodd' d='M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z'/></svg>")
@@ -11,9 +15,10 @@ $icon-external-link: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/
     width: 20px
     height: 20px
     position: relative
+    margin-right: 3px
 
     &::after
-        display: block
+        display: inline-block
         flex-shrink: 0
         width: 20px
         height: 20px
@@ -21,42 +26,25 @@ $icon-external-link: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/
         background-repeat: no-repeat
         background-size: 20px
         filter: invert(16%) sepia(23%) saturate(211%) hue-rotate(168deg) brightness(90%) contrast(102%) // $gray-900
-        //transition: filter 0.25s ease-in-out
 
     &.icon-hover:hover::after
         filter: invert(83%) sepia(10%) saturate(231%) hue-rotate(169deg) brightness(86%) contrast(92%) // $gray-500
 
-    // &::before
-    //     pointer-events: none;
+    &.icon-github
+        &::after
+            background-image: #{escape-svg($icon-github)}
 
-    //     display: block
-    //     opacity: 0
-    //     position: absolute
-    //     width: 40px
-    //     height: 20px
-    //     left: -10px
-    //     top: 45px
-
-    //     text-align: center
-    //     color: var(--bs-body-color)
-    //     font-size: 10px
-
-    //     transition: opacity 0.1s ease-in-out
-
-    // &:hover::before
-    //     opacity: 1
-
+    &.icon-mastodon
+        &::after
+            background-image: #{escape-svg($icon-mastodon)}
 
     &.icon-orcid
         &::after
             background-image: #{escape-svg($icon-orcid)}
-        // &::before
-        //     content: "ORCID"
 
     &.icon-external-link
         &::after
             background-image: #{escape-svg($icon-external-link)}
-            display: inline-block
             width: 12px
             height: 12px
             background-size: 12px

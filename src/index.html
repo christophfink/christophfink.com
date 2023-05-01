@@ -45,22 +45,22 @@
     <body
         data-bs-spy="scroll"
         data-bs-target="#navigation"
-        data-bs-root-margin="-10% 0px -40%"
+        data-bs-root-margin="30% 0px -40%"
         data-bs-smooth-scroll="true"
         tabindex="0"
     >
-        <div class="container-xxl my-3 g-2" id="home">
-            <main>
+        <div class="container-xxl my-sm-3 g-2" id="home">
             <section
                 class="container-md d-flex flex-wrap flex-md-nowrap
-                justify-content-center align-items-center p-4"
+                justify-content-center align-items-center 
+                px-4 py-0 py-sm-4 mb-0 mb-sm-3"
                 id="introduction"
             >
-                    <div class="">
-                        <img class="rounded-circle object-fit-cover img-fluid"
+                    <div class="ms-md-auto">
+                        <img class="rounded-circle object-fit-cover"
                         src="assets/img/Christoph_Fink_256x256px.jpg">
                     </div>
-                    <div class="ms-4 flex-shrink-1 mw-75">
+                    <div class="ms-2 ms-sm-5 ms-md-4 mt-4 mt-sm-0 me-2 me-md-auto flex-shrink-1 mw-100 mw-sm-75">
                         <p class="mt-4 mb-0">
                             <span>
                                 <em>Servus!</em>
@@ -70,7 +70,7 @@
                             <span>My name is</span>
                         </p>
                         <h1 class="align-middle">Christoph Fink</h1>
-                        <p class="lead w-75 lh-sm">
+                        <p class="lead w-100 w-md-75 lh-sm">
                             I’m an
                             urban geographer,
                             cartographer, and 
@@ -82,39 +82,104 @@
                                 href="https://orcid.org/0000-0003-1251-9726"
                                 class="icon icon-hover icon-orcid"
                             >
-                                <span class="visually-hidden">ORCID</span>
+                                <span class="visually-hidden">ORCID: 0000-0003-1251-9726</span>
+                            </a>
+                            <a 
+                                rel="me social"
+                                href="https://mastodon.christophfink.com/@christoph"
+                                class="icon icon-hover icon-mastodon"
+                            >
+                                <span class="visually-hidden">Mastodon: christoph@christophfink.com</span>
+                            </a>
+                            <a 
+                                rel="me social"
+                                href="https://github.com/christophfink/"
+                                class="icon icon-hover icon-github"
+                            >
+                                <span class="visually-hidden">GitHub: christophfink</span>
                             </a>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <header class="navbar navbar-expand-sm sticky-top px-4 py-2" role="navigation">
-                <ul class="navbar-nav nav-underline me-auto mb-2 mb-lg-0 container-fluid justify-content-center">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#research">Research</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#short-cv">Short CV</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#publications">Publications</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://christophfink.com/blog/">
-                            Blog <i class="icon icon-external-link"></i>
-                        </a>
-                    </li>
-                </ul>
+            <header class="navbar navbar-expand-md sticky-top px-4 py-2" role="navigation">
+                <button
+                    class="navbar-toggler fixed-top rounded-1 m-1 p-0 border-0"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvas-navbar"
+                    aria-controls="offcanvas-navbar"
+                    aria-label="Toggle navigation"
+                >
+                    <!--<span class="navbar-toggler-icon"></span>//-->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-down-right-square-fill" viewBox="0 0 16 16">
+  <path d="M14 16a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12zM5.904 5.197 10 9.293V6.525a.5.5 0 0 1 1 0V10.5a.5.5 0 0 1-.5.5H6.525a.5.5 0 0 1 0-1h2.768L5.197 5.904a.5.5 0 0 1 .707-.707z"/>
+</svg>
+                </button>
+
+                <div class="offcanvas offcanvas-start bg-body-secondary" tabindex="-1" id="offcanvas-navbar">
+                    <div class="offcanvas-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav nav-underline me-auto mb-2 mb-lg-0 container-fluid justify-content-md-center">
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    data-bs-dismiss="offcanvas"
+                                    data-bs-target="#offcanvas-navbar"
+                                    href="#home"
+                                >Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    data-bs-dismiss="offcanvas"
+                                    data-bs-target="#offcanvas-navbar"
+                                    href="#research"
+                                >Research</a>
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    data-bs-dismiss="offcanvas"
+                                    data-bs-target="#offcanvas-navbar"
+                                    href="#projects"
+                                >Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    data-bs-dismiss="offcanvas"
+                                    data-bs-target="#offcanvas-navbar"
+                                    href="#short-cv"
+                                >Short CV</a>
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    data-bs-dismiss="offcanvas"
+                                    data-bs-target="#offcanvas-navbar"
+                                    href="#publications"
+                                >Publications</a>
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    data-bs-dismiss="offcanvas"
+                                    data-bs-target="#offcanvas-navbar"
+                                    href="https://christophfink.com/blog/"
+                                >
+                                    Blog <i class="icon icon-external-link"></i>
+                                </a>
+                            </li> 
+                        </ul>
+                    </div>
+                </div>
             </header>
 
-            <section class="container-md p-4">
+            <section class="container-md px-4 py-0 py-sm-4">
                 <h2 id="research">Research</h2>
                 <p>lorem ipsum sit dolor</p>
 
@@ -162,7 +227,7 @@
                 </p>
             </section>
 
-            <section class="container-md p-4">
+            <section class="container-md  px-4 py-0 py-sm-4">
                 <h2 id="projects">Projects</h2>
                 <p>lorem ipsum sit dolor</p>
                 <p>
@@ -209,7 +274,7 @@
                 </p>
             </section>
 
-            <section class="container-md p-4">
+            <section class="container-md px-4 py-0 py-sm-4">
                 <h2 id="short-cv">Short CV</h2>
                 <p>lorem ipsum sit dolor</p>
                 <p>
@@ -256,7 +321,7 @@
                 </p>
             </section>
 
-            <section class="container-md p-4">
+            <section class="container-md px-4 py-0 py-sm-4">
                 <h2 id="publications">Publications</h2>
                 <p>lorem ipsum sit dolor</p>
                 <p>
@@ -303,9 +368,14 @@
                 </p>
             </section>
 
-            </main>
 
-
+            <footer class="bg-dark-subtle text-light mh-vh-25 mt-5 px-4 py-5">
+                <div class="container-xxl d-md-flex justify-content-center">
+                    <div class="flex-fill">Name, email adfasdf</div>
+                    <div class="flex-fill">a few links to random things</div>
+                    <div class="flex-fill">adfasdfsdf</div>
+                </div>
+            </footer>
             <!--<footer with contact etc>-->
         </div>
     </body>
