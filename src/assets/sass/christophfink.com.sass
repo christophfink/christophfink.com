@@ -10,7 +10,7 @@ $body-bg-dark: #141515
 $body-bg: #f5fcf7
 $dark-bg-subtle: $gray-700
 
-$font-family-base: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+@import "./typography"
 
 @import "./bootstrap-core"
 @import "./bootstrap-extra"
@@ -20,9 +20,6 @@ $font-family-base: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helve
 
 button.navbar-toggler
     background-color: var(--bs-body-bg)
-
-footer
-    font-size: 80%
 
 header.navbar
     background-color: var(--bs-body-bg)
@@ -36,6 +33,7 @@ section#introduction
 
     h1
         font-size: calc(1.375rem + 1vW)
+        @include dynmetric_letter_spacing(2rem)
         font-weight: 630
         margin-left: -0.2rem
     p

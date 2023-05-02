@@ -1,0 +1,33 @@
+@import "../../../vendor/sass-math-pow/sass/"
+
+
+$font-family-base: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+
+
+// https://rsms.me/inter/dynmetrics/
+// tracking = a + b * e ^ (c * z)
+$a: -0.0223
+$b:  0.185
+$c: -0.1745
+$e: 2.71828 
+
+@mixin dynmetric_letter_spacing($font-size)
+    letter-spacing: $a + $b * poly-pow($e, ($c * ($font-size * 16)))
+
+
+body
+    @include dynmetric_letter_spacing($font-size-base)
+
+@each $level, $font-size in $font-sizes
+    h#{$level}
+    .h#{$level}
+    .fs-#{$level}
+        @include dynmetric_letter_spacing($font-size)
+
+lead
+.lead
+    @include dynmetric_letter_spacing($lead-font-size)
+
+small
+.small
+    @include dynmetric_letter_spacing($small-font-size)

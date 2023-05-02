@@ -6,3 +6,7 @@
 	path = vendor/bootstrap-icons
 	url = git@github.com:twbs/icons.git
     tag = v1.10.5
+[submodule "vendor/sass-math-pow"]
+	path = vendor/sass-math-pow
+	url = git@github.com:strarsis/sass-math-pow.git
+    tag = v0.2.0
