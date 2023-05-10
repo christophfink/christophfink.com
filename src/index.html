@@ -44,6 +44,7 @@
 
         <script src="assets/js/bootstrap.min.js"></script>
         <script src="assets/js/bootstrap-darkmode.js"></script>
+        <script src="assets/js/matomo.js"></script>
         <script src="assets/js/christophfink.com.js"></script>
     </head>
     <body
@@ -85,22 +86,23 @@
                                 rel="me social"
                                 href="https://orcid.org/0000-0003-1251-9726"
                                 class="icon icon-hover icon-orcid"
-                            >
-                                <span class="visually-hidden">ORCID: 0000-0003-1251-9726</span>
-                            </a>
+                            ><span class="visually-hidden">
+                                ORCID: 0000-0003-1251-9726
+                            </span></a>
                             <a
                                 rel="me social"
                                 href="https://mastodon.christophfink.com/@christoph"
                                 class="icon icon-hover icon-mastodon"
-                            >
-                                <span class="visually-hidden">Mastodon: christoph@christophfink.com</span>
-                            </a>
+                            ><span class="visually-hidden">
+                                Mastodon: christoph@christophfink.com
+                            </span></a>
                             <a
                                 rel="me social"
                                 href="https://github.com/christophfink/"
                                 class="icon icon-hover icon-github"
-                            >
-                                <span class="visually-hidden">GitHub: christophfink</span>
+                            ><span class="visually-hidden">
+                                GitHub: christophfink
+                            </span>
                             </a>
                         </div>
                     </div>
@@ -374,21 +376,81 @@
 
 
             <footer class="bg-dark-subtle text-light small mh-vh-25 mt-5 px-4 py-5">
-                <div class="container-xxl d-md-flex justify-content-center">
-                    <div class="flex-fill">
-
-                    Name, email adfasdf
-                        <p>
-                            <a href="assets/christophfink.asc">
-                                PGP: 51CA FB33 2396 5894 107E  D75D 559E 1840 B807 DF70
-                            </a>
-                        </p>
+                <div class="container-md d-md-flex flex-md-nowrap flex-wrap justify-content-center">
+                    <div class="flex-fill h-card">
+                        <div class="name-email">
+                            <div class="p-name">Christoph Fink</div>
+                            <span class="p-given-name visually-hidden">Christoph</span>
+                            <span class="p-family-name visually-hidden">Fink</span>
+                            <div>
+                                <a class="u-email" href="mailto:christoph.fink@christophfink.com">
+                                    christoph.fink@christophfink.com
+                                </a>
+                            </div>
+                            <div>
+                                <a class="u-key" href="assets/christophfink.asc">
+                                    <span class="visually-hidden">PGP:</span>
+                                    51CA FB33 2396 5894 107E  D75D 559E 1840 B807 DF70
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="flex-fill">a few links to random things</div>
-                    <div class="flex-fill">adfasdfsdf</div>
+
+                    <div class="social-links flex-fill">
+                        <div>
+                            <a
+                                rel="me social"
+                                href="https://orcid.org/0000-0003-1251-9726"
+                                class="icon icon-orcid"
+                            >0000-0003-1251-9726</a>
+                        </div>
+                        <div>
+                            <a
+                                rel="me social"
+                                href="https://mastodon.christophfink.com/@christoph"
+                                class="u-url icon icon-mastodon"
+                            >@christoph@christophfink.com</a>
+                        </div>
+                        <div>
+                            <a
+                                rel="me social"
+                                href="https://twitter.com/chrxf"
+                                class="u-url icon icon-twitter"
+                            >@chrxf</a>
+                        </div>
+                        <div>
+                            <a
+                                rel="me" 
+                                href="xmpp://christoph@christophfink.com"
+                                class="u-url icon icon-xmpp" 
+                            >christoph@christophfink.com</a>
+                        </div>
+                    </div>
+
+                    <div class="source-repositories flex-fill">
+                        <div>
+                            <a
+                                rel="me"
+                                href="https://gitlab.com/christophfink/"
+                                class="u-url icon icon-gitlab"
+                            >christophfink</a>
+                        </div>
+                        <div>
+                            <a
+                                rel="me"
+                                href="https://github.com/christophfink/"
+                                class="u-url icon icon-github"
+                            >christophfink</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-item w-100 px-2 py-5 text-center statistics">
+                    This page uses <a href="https://matomo.org/">matomo</a> to gather <a
+                    href="/lib/matomo/index.php?module=CoreHome&action=index&idSite=2&period=month&date=yesterday">visitation
+                    statistics</a>, without collecting personal information.
                 </div>
             </footer>
-            <!--<footer with contact etc>-->
         </div>
     </body>
 </html>

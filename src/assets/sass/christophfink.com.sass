@@ -21,6 +21,36 @@ $dark-bg-subtle: $gray-700
 button.navbar-toggler
     background-color: var(--bs-body-bg)
 
+footer
+    a
+        text-decoration: none
+        color: rgba(var(--bs-light-rgb), var(--bs-text-opacity)) !important
+        //position: static
+
+        &:hover
+            text-decoration: underline
+
+        &.u-key
+            font-size: 75%
+
+    div.name-email, div.social-links, div.source-repositories
+        margin-bottom: 1rem
+
+    .icon::before
+        // -> rgba(var(--bs-light-rgb), var(--bs-text-opacity))
+        filter: invert(98%) sepia(11%) saturate(207%) hue-rotate(175deg) brightness(100%) contrast(97%)
+
+        height: 16px
+        width: 16px
+        background-size: 16px
+
+        position: relative
+        top: 3px
+        margin-right: 0.2rem
+
+    .statistics
+        font-size: 75%
+
 header.navbar
     background-color: var(--bs-body-bg)
 
