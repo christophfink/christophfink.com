@@ -3,6 +3,7 @@ dl.publications
         list-style: none
         padding: 0
 
+li[itemtype="https://schema.org/Chapter"],
 li[itemtype="https://schema.org/ScholarlyArticle"],
 li[itemtype="https://schema.org/Thesis"]
 
@@ -14,7 +15,8 @@ li[itemtype="https://schema.org/Thesis"]
         @include dynmetric_letter_spacing($font-size-base)
         font-weight: 600
 
-    span[itemprop="author"]
+    span[itemprop="author"],
+    span[itemprop="editor"]
         white-space: nowrap
 
         &.me
@@ -32,6 +34,7 @@ li[itemtype="https://schema.org/Thesis"]
     span[itemprop="sourceOrganization"]
         font-style: italic
 
+    span[itemtype="https://schema.org/Book"],
     span[itemtype="https://schema.org/Periodical"],
     span[itemtype="https://schema.org/PublicationVolume"],
     span[itemtype="https://schema.org/PublicationIssue"]
