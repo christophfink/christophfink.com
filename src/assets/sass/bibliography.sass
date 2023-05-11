@@ -3,8 +3,16 @@ dl.publications
         list-style: none
         padding: 0
 
-li[itemtype="https://schema.org/ScholarlyArticle"]
-    padding-bottom: 0.5rem
+li[itemtype="https://schema.org/ScholarlyArticle"],
+li[itemtype="https://schema.org/Thesis"]
+
+    padding-bottom: 1rem
+
+    > h4[itemprop="name"]
+        display: inline
+        font-size: $font-size-base
+        @include dynmetric_letter_spacing($font-size-base)
+        font-weight: 600
 
     span[itemprop="author"]
         white-space: nowrap
@@ -20,11 +28,9 @@ li[itemtype="https://schema.org/ScholarlyArticle"]
         &::after
             content: ")"
 
-    > h4[itemprop="name"]
-        display: inline
-        font-size: $font-size-base
-        @include dynmetric_letter_spacing($font-size-base)
-        font-weight: 600
+    span[itemprop="inSupportOf"],
+    span[itemprop="sourceOrganization"]
+        font-style: italic
 
     span[itemtype="https://schema.org/Periodical"],
     span[itemtype="https://schema.org/PublicationVolume"],
