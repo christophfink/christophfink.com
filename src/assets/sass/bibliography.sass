@@ -1,35 +1,17 @@
-li[itemtype="https://schema.org/ScholarlyArticle"]
-    //display: flex
-    //flex-wrap: wrap
+dl.publications
+    ul
+        list-style: none
+        padding: 0
 
-    //span
-    //    display: inline
+li[itemtype="https://schema.org/ScholarlyArticle"]
+    padding-bottom: 0.5rem
 
     span[itemprop="author"]
-        //display: inline-flex
-        //flex-wrap: wrap
-
-        // &::after
-        //     content: ", "
-
-        // &.last-author
-        //     &::before
-        //         content: " & "
-
-        //     &::after
-        //         content: " "
-
         white-space: nowrap
 
         &.me
             span[itemprop="familyName"]
                 text-decoration: underline
-
-        // span[itemprop="familyName"]
-        //     &::after
-        //         content: ", "
-        //     &:last-child::after
-        //         content: ""
 
     span[itemprop="datePublished"]
         &::before
@@ -44,9 +26,6 @@ li[itemtype="https://schema.org/ScholarlyArticle"]
         @include dynmetric_letter_spacing($font-size-base)
         font-weight: 600
 
-        //&::before
-        //    content: ": "
-
     span[itemtype="https://schema.org/Periodical"],
     span[itemtype="https://schema.org/PublicationVolume"],
     span[itemtype="https://schema.org/PublicationIssue"]
@@ -56,22 +35,12 @@ li[itemtype="https://schema.org/ScholarlyArticle"]
             content: " "
 
     span[itemtype="https://schema.org/PublicationIssue"]
-        &::before
-            content: "("
-        &::after
-            content: ") "
+        span[itemprop="issueNumber"]
+            display: inline-block
+            margin-left: -0.25ch
+            margin-right: -0.5ch
 
-body
-    counter-reset: reversed(year) 2024
-
-ol.years
-    list-style-type: none
-    padding: none
-
-    >li
-        &::before
-            content: counter(year) "  "
-
-        counter-increment: year -1
-        float: left
-
+            &::before
+                content: "("
+            &::after
+                content: ") "
