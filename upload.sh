@@ -30,6 +30,7 @@ rsync \
     --archive \
     --info=progress2 \
     --exclude="urbanage-ttm-ui" \
+    --exclude="urbanage-ttm" \
     --delete \
     "${BUILD}" \
     "${REMOTE}"
