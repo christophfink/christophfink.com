@@ -1,6 +1,11 @@
 @import "./bootstrap-functions"
 
 // override default variables here
+$indigo:  #6610f2
+$indigo-700: shade-color($indigo, 40%)
+$link-color: $indigo-700
+$link-decoration: underline 0.25rem rgba(0, 133, 242, 0.25)
+$link-hover-decoration: underline 0.25rem rgba(0, 133, 242, 0.15)
 
 @import "./bootstrap-variables"
 
@@ -58,6 +63,11 @@ header.navbar
 .navbar-toggler:focus
     box-shadow: none
 
+p
+    .lead
+        font-size: 1.15rem
+        @include dynmetric_letter_spacing(1.15rem)
+
 section#introduction
     margin-top: calc(12vW + 1rem)
     margin-bottom: calc(3vW + 1rem)
@@ -82,7 +92,18 @@ section#projects
         font-size: 1.25rem
         @include dynmetric_letter_spacing(1.25rem)
 
+        span.badge
+            font-size: 0.7rem
+            @include dynmetric_letter_spacing(0.7rem)
+            font-weight: 500
+            vertical-align: top
+
 section
+    dl.years
+        ul
+            list-style: none
+            padding: 0
+
     h2
         padding-top: 4rem !important
 
