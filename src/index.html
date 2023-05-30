@@ -50,7 +50,6 @@
     <body
         data-bs-spy="scroll"
         data-bs-target="#navigation"
-        data-bs-root-margin="30% 0px -40%"
         data-bs-smooth-scroll="true"
         tabindex="0"
     >
@@ -109,7 +108,7 @@
                 </div>
             </section>
 
-            <header class="navbar navbar-expand-md sticky-top px-4 py-2" role="navigation">
+            <header class="navbar navbar-expand-md sticky-top px-4 py-2" role="navigation" id="navigation">
                 <button
                     class="navbar-toggler fixed-top rounded-1 m-1 p-0 border-0"
                     type="button"
@@ -277,9 +276,9 @@
                 <h3 id="perform">
                     <strong>PERFORM!</strong> Urban activism by experts
                     <span class="fw-light">(Marie Skłodowska Curie Action Postdoctoral Fellowship)</span>
-                    <span class="badge rounded-pill text-bg-primary">research project</span>
-                    <span class="badge rounded-pill text-bg-primary">urban ethnography</span>
-                    <span class="badge rounded-pill text-bg-secondary">upcoming</span>
+                    <span class="badge rounded-pill text-bg-project-type">research project</span>
+                    <span class="badge rounded-pill text-bg-topic-area">urban ethnography</span>
+                    <span class="badge rounded-pill text-bg-project-duration">upcoming</span>
                 </h3>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -291,9 +290,9 @@
                 <h3 id="urbanage">
                     <strong>URBANAGE</strong>: Can urban digital twins improve planning for older people?
                     <span class="fw-light">(Horizon 2020 project)</span>
-                    <span class="badge rounded-pill text-bg-primary">Research project</span>
-                    <span class="badge rounded-pill text-bg-primary">urban data science</span>
-                    <span class="badge rounded-pill text-bg-secondary">2021-2024</span>
+                    <span class="badge rounded-pill text-bg-project-type">research project</span>
+                    <span class="badge rounded-pill text-bg-topic-area">urban data science</span>
+                    <span class="badge rounded-pill text-bg-project-duration">since 2021</span>
                 </h3>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -304,9 +303,9 @@
                 </p>
                 <h3 id="r5py">
                     <strong>R⁵py</strong>: multi-modal accessibility on a city-wide scale
-                    <span class="badge rounded-pill text-bg-primary">Python library</span>
-                    <span class="badge rounded-pill text-bg-primary">urban data science</span>
-                    <span class="badge rounded-pill text-bg-secondary">2022-</span>
+                    <span class="badge rounded-pill text-bg-project-type">Python library</span>
+                    <span class="badge rounded-pill text-bg-topic-area">urban data science</span>
+                    <span class="badge rounded-pill text-bg-duration">since 2022</span>
                 </h3>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -318,9 +317,10 @@
                 <h3 id="austromorph">
                     <strong>austromorph</strong>: anamorphic maps (‘cartograms’)
                     on topics of societal, political, and economical relevance
-                    <span class="badge rounded-pill text-bg-primary">web site</span>
-                    <span class="badge rounded-pill text-bg-primary">thematic cartography</span>
-                    <span class="badge rounded-pill text-bg-secondary">2016-</span>
+                    <span class="badge rounded-pill text-bg-project-type">web site</span>
+                    <span class="badge rounded-pill text-bg-topic-area">thematic cartography</span>
+                    <span class="badge rounded-pill text-bg-topic-area">political activism</span>
+                    <span class="badge rounded-pill text-bg-project-duration">since 2016</span>
                 </h3>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -331,7 +331,7 @@
                 </p>
             </section>
 
-            <section id="short-cv" class="container-md px-4 py-0 py-sm-4">
+            <section id="short-cv" class="container-md px-4 py-0 py-sm-4 clearfix">
                 <h2>Short CV</h2>
                 <dl class="publications years container-md px-0">
                     <div class="row g-1">
@@ -352,13 +352,56 @@
                             <div>University of Helsinki</div>
                         </dd>
                     </div>
+                    <div class="row g-1">
+                        <dt class="col-md-1">2019 - 2021</dt>
+                        <dd class="col-md-11">
+                            <strong>researcher</strong>
+                            <div>Helsinki Lab of Interdisciplinary Conservation Science,</div>
+                            <div>Department of Geosciences and Geography,</div>
+                            <div>University of Helsinki</div>
+                        </dd>
+                    </div>
+                    <div class="row g-1">
+                        <dt class="col-md-1">2017 - 2019</dt>
+                        <dd class="col-md-11">
+                            <strong>researcher</strong>
+                            <div>Digital Geography Lab,</div>
+                            <div>Department of Geosciences and Geography,</div>
+                            <div>University of Helsinki</div>
+                        </dd>
+                    </div>
+                    <div class="row g-1">
+                        <dt class="col-md-1">2016 - 2017</dt>
+                        <dd class="col-md-11">
+                            <strong>researcher</strong>
+                            <div>Department of Social and Cultural Anthropology,</div>
+                            <div>University of Vienna</div>
+                        </dd>
+                    </div>
+                    <div class="row g-1">
+                        <dt class="col-md-1">2011 - 2014</dt>
+                        <dd class="col-md-11">
+                            <strong>researcher</strong>
+                            <div>Interfaculty Department of Geoinformatics Z_GIS,</div>
+                            <div>University of Salzburg</div>
+                        </dd>
+                    </div>
+                    <div class="row g-1">
+                        <dt class="col-md-1">2011</dt>
+                        <dd class="col-md-11">
+                            <strong>Mag. rer. nat. (with distinction)</strong>
+                            in <em>Geography (major in Cartography and Geoinformation)</em>
+                            <div>Department of Geography and Regional Research,</div>
+                            <div>University of Vienna</div>
+                        </dd>
+                    </div>
                 </dl>
                 <p>
                     <a href="https://christophfink.com/cv">Full CV</a>
                 </p>
             </section>
 
-            <section id="publications" class="container-md px-4 py-0 py-sm-4">
+            <section id="publications" class="container-md px-4 py-0 py-sm-4 clearfix">
                 <h2>Publications</h2>
                 <dl class="publications years container-md px-0">
                     <div class="row g-1">
