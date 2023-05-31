@@ -5,7 +5,18 @@ IFS=$'\n\t '
 
 declare SRC="$(dirname $0)/src/"
 declare BUILD="$(dirname $0)/build/"
-declare REMOTE="christoph@[fdcf::1]:/var/www/dev.christophfink.com/htdocs-secure/"
+declare REMOTE_DEVELOPMENT="christoph@[fdcf::1]:/var/www/dev.christophfink.com/htdocs-secure/"
+declare REMOTE_PRODUCTION="christoph@[fdcf::1]:/var/www/christophfink.com/htdocs-secure/"
+
+declare REMOTE="${REMOTE_DEVELOPMENT}"
+if [[ "$1" == "--production" ]]; then
+    echo "Upload to production requested"
+    read -r -p "Proceed? [y/N] " response
+    response=${response,,}    # tolower
+    if [[ "$response" =~ ^(yes|y)$ ]]; then
+        REMOTE="${REMOTE_PRODUCTION}"
+    fi
+fi
 
 # 1. sync to build dir and generate css from sass
 rsync \
@@ -29,8 +40,10 @@ sassc \
 rsync \
     --archive \
     --info=progress2 \
+    --exclude="blog" \
     --exclude="urbanage-ttm-ui" \
     --exclude="urbanage-ttm" \
+    --exclude=".well-known" \
     --delete \
     "${BUILD}" \
     "${REMOTE}"
