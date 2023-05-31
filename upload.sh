@@ -9,7 +9,7 @@ declare REMOTE_DEVELOPMENT="christoph@[fdcf::1]:/var/www/dev.christophfink.com/h
 declare REMOTE_PRODUCTION="christoph@[fdcf::1]:/var/www/christophfink.com/htdocs-secure/"
 
 declare REMOTE="${REMOTE_DEVELOPMENT}"
-if [[ "$1" == "--production" ]]; then
+if [[ "${1-}" == "--production" ]]; then
     echo "Upload to production requested"
     read -r -p "Proceed? [y/N] " response
     response=${response,,}    # tolower
