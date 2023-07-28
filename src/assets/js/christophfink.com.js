@@ -8,7 +8,13 @@
     "use strict"
 
     document.addEventListener("DOMContentLoaded", function () {
-
+        document.querySelectorAll("navigation .navbar a.nav-link").forEach(
+            navlink => {
+                navlink.addEventListener("click", () => {
+                    console.log(navlink)
+                })
+            }
+        )
     })
 
 }())
