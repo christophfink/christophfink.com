@@ -9,6 +9,7 @@ declare REMOTE_DEVELOPMENT="christoph@[fdcf::1]:/var/www/dev.christophfink.com/h
 declare REMOTE_PRODUCTION="christoph@[fdcf::1]:/var/www/christophfink.com/htdocs-secure/"
 
 declare REMOTE="${REMOTE_DEVELOPMENT}"
+
 if [[ "${1-}" == "--production" ]]; then
     echo "Upload to production requested"
     read -r -p "Proceed? [y/N] " response
@@ -16,6 +17,10 @@ if [[ "${1-}" == "--production" ]]; then
     if [[ "$response" =~ ^(yes|y)$ ]]; then
         REMOTE="${REMOTE_PRODUCTION}"
     fi
+fi
+
+if [[ "${1-}" == "--build-only" ]]; then
+    REMOTE=""
 fi
 
 # 1. sync to build dir and generate css from sass
@@ -37,13 +42,15 @@ sassc \
     "${BUILD}/assets/css/christophfink.com.css"
 
 # 2. sync to server
-rsync \
-    --archive \
-    --info=progress2 \
-    --exclude="blog" \
-    --exclude="urbanage-ttm-ui" \
-    --exclude="urbanage-ttm" \
-    --exclude=".well-known" \
-    --delete \
-    "${BUILD}" \
-    "${REMOTE}"
+if [[ ! -z "$REMOTE" ]]; then
+    rsync \
+        --archive \
+        --info=progress2 \
+        --exclude="blog" \
+        --exclude="urbanage-ttm-ui" \
+        --exclude="urbanage-ttm" \
+        --exclude=".well-known" \
+        --delete \
+        "${BUILD}" \
+        "${REMOTE}"
+fi
