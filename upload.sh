@@ -47,8 +47,7 @@ if [[ ! -z "$REMOTE" ]]; then
         --archive \
         --info=progress2 \
         --exclude="blog" \
-        --exclude="urbanage-ttm-ui" \
-        --exclude="urbanage-ttm" \
+        --exclude="misc" \
         --exclude=".well-known" \
         --delete \
         "${BUILD}" \
