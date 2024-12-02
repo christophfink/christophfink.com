@@ -47,6 +47,7 @@ if [[ ! -z "$REMOTE" ]]; then
         --archive \
         --info=progress2 \
         --exclude="blog" \
+        --exclude="_cv" \
         --exclude="misc" \
         --exclude=".well-known" \
         --delete \
