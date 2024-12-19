@@ -1,0 +1,10 @@
+version: 2
+updates:
+  - package-ecosystem: "gitsubmodule"
+    directory: "/"
+    allow:
+      - dependency-name: "vendor/bootstrap"
+      - dependency-name: "vendor/bootstrap-icons"
+      - dependency-name: "vendor/sass-math-pow"
+    schedule:
+      interval: "daily"
