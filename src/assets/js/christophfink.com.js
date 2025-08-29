@@ -7,14 +7,20 @@
 (function () {
     "use strict"
 
-    document.addEventListener("DOMContentLoaded", function () {
-        document.querySelectorAll("navigation .navbar a.nav-link").forEach(
+    const f = function () {
+        /*document.querySelectorAll("navigation .navbar a.nav-link").forEach(
             navlink => {
                 navlink.addEventListener("click", () => {
                     console.log(navlink)
                 })
             }
-        )
-    })
+        )*/
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", f)
+    } else {
+        f()
+    }
 
 }())
